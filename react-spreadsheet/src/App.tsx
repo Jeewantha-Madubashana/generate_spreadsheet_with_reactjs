@@ -1,12 +1,21 @@
-import React from 'react';
-
-import './App.css';
+import React from "react";
+import { Axios } from "axios";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      
-        <p>Main Component ......... </p>
+      <Router>
+        <Switch>
+          <Redirect exact from="/" to="/home" />
+        </Switch>
+      </Router>
     </div>
   );
 }
